@@ -1,8 +1,7 @@
 import React from 'react';
 
 const Header = () => (
-  <div style={{ color: '#7CFC00', fontFamily: 'monospace', fontSize: '2rem', textAlign: 'center', margin: '2rem 0 1rem 0' }}>
-    {/* insert ascii name here */}
+  <div style={{ color: '#8fc7a3', fontFamily: 'monospace', fontSize: '2rem', textAlign: 'left', margin: '2rem 0 1rem 2rem' }}>
     james foxworth
   </div>
 );

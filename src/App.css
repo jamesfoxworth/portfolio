@@ -1,14 +1,16 @@
 body {
   margin: 0;
   padding: 0;
-  background: #0a1833;
+  background: #181c20;
   font-family: monospace, monospace;
+  color: #e0e0e0;
 }
 
 .App {
   min-height: 100vh;
-  background: #0a1833;
+  background: #181c20;
   padding-bottom: 3rem;
+  text-align: left;
 }
 
 .App-logo {
@@ -43,5 +45,22 @@ body {
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+.fade-in {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+  animation: fadeInUp 0.4s;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
