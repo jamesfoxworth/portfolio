@@ -7,14 +7,17 @@ import React, { useState } from 'react';
 function App() {
   const [activeSection, setActiveSection] = useState('home');
   const [animate, setAnimate] = useState(true);
+  const [fadeOut, setFadeOut] = useState(false);
 
   const handleSectionChange = (section) => {
     if (section !== activeSection) {
-      setAnimate(false);
+      setFadeOut(true);
       setTimeout(() => {
+        setFadeOut(false);
+        setAnimate(false);
         setActiveSection(section);
-        setAnimate(true);
-      }, 200);
+        setTimeout(() => setAnimate(true), 10);
+      }, 300);
     }
   };
 
@@ -22,7 +25,7 @@ function App() {
     <div className="App" style={{ minHeight: '100vh', background: '#181c20' }}>
       <Header />
       <NavBar activeSection={activeSection} onSectionChange={handleSectionChange} />
-      <MainContent activeSection={activeSection} animate={animate} />
+      <MainContent activeSection={activeSection} animate={animate} fadeOut={fadeOut} />
     </div>
   );
 }
