@@ -1,5 +1,14 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: #0a1833;
+  font-family: monospace, monospace;
+}
+
 .App {
-  text-align: center;
+  min-height: 100vh;
+  background: #0a1833;
+  padding-bottom: 3rem;
 }
 
 .App-logo {
